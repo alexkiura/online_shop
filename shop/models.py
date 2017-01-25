@@ -2,6 +2,7 @@
 
 from django.db import models
 
+
 class Category(models.Model):
     """Category model."""
     name = models.CharField(max_length=200,
@@ -9,6 +10,7 @@ class Category(models.Model):
     slug = models.SlugField(max_length=200,
                             db_index=True,
                             unique=True)
+
     class Meta:
         """Meta class."""
         ordering = ('name',)
