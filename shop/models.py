@@ -1,6 +1,7 @@
 """Application models."""
 
 from django.db import models
+from django.core.urlresolvers import reverse
 
 
 class Category(models.Model):
@@ -10,6 +11,11 @@ class Category(models.Model):
     slug = models.SlugField(max_length=200,
                             db_index=True,
                             unique=True)
+
+    def get_absolute_url(self):
+        """"Get the url for a category."""
+        return reverse('shop:product_list_by_category',
+                       args=[self.slug])
 
     class Meta:
         """Meta class."""
@@ -33,6 +39,11 @@ class Product(models.Model):
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+    def get_absolute_url(self):
+        """"Get the url for a product."""
+        return reverse('shop:product_detail',
+                       args=[self.id, self.slug])
 
     class Meta:
         """Meta class."""
