@@ -19,10 +19,10 @@ def product_list(request, category_slug=None):
                    'products': products})
 
 
-def product_detail(request, id, slug):
+def product_detail(request, product_id, slug):
     """Render a single product."""
     product = get_object_or_404(Product,
-                                id=id,
+                                id=product_id,
                                 slug=slug,
                                 available=True)
     return render(request,
