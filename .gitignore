@@ -6,3 +6,6 @@
 *.jpg
 *.jpeg
 *.png
+
+# staticfiles
+/staticfiles/
