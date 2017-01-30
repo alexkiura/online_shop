@@ -22,7 +22,8 @@ PREREQ_APPS = [
 ]
 
 PROJECT_APPS = [
-    'shop'
+    'shop',
+    'cart',
 ]
 
 INSTALLED_APPS = PREREQ_APPS + PROJECT_APPS
@@ -46,6 +47,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+CART_SESSION_ID = 'cart'
 
 TEMPLATES = [
     {
