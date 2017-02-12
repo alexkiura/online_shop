@@ -10,7 +10,7 @@ SECRET_KEY = 'm4ardrbu!=_rvqr#5=^0*fyz(q9ih^pqo$in&wdl@*nf0ksluu'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 PREREQ_APPS = [
     'django.contrib.admin',
