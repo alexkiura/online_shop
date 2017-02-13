@@ -7,5 +7,9 @@
 *.jpeg
 *.png
 
+#env files
+.env
+.dotenv
+
 # staticfiles
 /staticfiles/
