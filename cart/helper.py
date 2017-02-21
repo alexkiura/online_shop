@@ -29,7 +29,7 @@ class Cart(object):
             self.cart[product_id] = {'quantity': 0,
                                      'price': str(product.price)}
         if update_quantity:
-            self.cart[product_id]['product_id'] = quantity
+            self.cart[product_id]['quantity'] = quantity
         else:
             self.cart[product_id]['quantity'] += quantity
 
