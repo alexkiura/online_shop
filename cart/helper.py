@@ -71,6 +71,13 @@ class Cart(object):
         """
         return sum(item['quantity'] for item in self.cart.values())
 
+    @property
+    def is_empty(self):
+        """
+        Check whether the cart is empty.
+        """
+        return len(self) == 0
+
     def get_total_price(self):
         """
         Calculate total price of all items in the cart.
