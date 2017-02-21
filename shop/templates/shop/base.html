@@ -11,7 +11,13 @@
         <a href="/" class="logo">My shop</a>
     </div>
     <div id="subheader">
-        <div class="cart">Your cart is empty.</div>
+        <div class="cart">{% if cart.is_empty %}
+            Your cart is empty
+        {% else %}
+        {% with items=cart|length %}
+            You have {{ items }} item{{ items|pluralize }} in the cart
+        {% endwith %}
+        {% endif %} </div>
     </div>
     <div id="content">
         {% block content %}
