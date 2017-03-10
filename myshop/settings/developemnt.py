@@ -1,3 +1,5 @@
+"""Development settings for myshop project."""
+
 from .base import *
 
 

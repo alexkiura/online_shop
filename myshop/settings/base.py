@@ -1,5 +1,5 @@
 """
-Django settings for myshop project.
+Base settings for myshop project.
 """
 import os
 
