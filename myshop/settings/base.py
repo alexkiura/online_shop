@@ -25,6 +25,7 @@ PREREQ_APPS = [
 PROJECT_APPS = [
     'shop',
     'cart',
+    'orders',
 ]
 
 INSTALLED_APPS = PREREQ_APPS + PROJECT_APPS
