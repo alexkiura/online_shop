@@ -18,7 +18,7 @@
                     Your Cart:
                     <a href="{% url "cart:cart_detail" %}">
                         {{ total_items }} item{{ total_items|pluralize }},
-                        KES {{ cart.get_total_price|intcomma }}
+                        Ksh {{ cart.get_total_price|intcomma }}
                     </a>
                 {% else %}
                     Your cart is empty.
