@@ -1,10 +1,12 @@
+"""Order views."""
 from django.shortcuts import render
+from cart.helper import Cart
 from .models import OrderItem
 from .forms import OrderCreateForm
-from cart.helper import Cart
 
 
 def order_create(request):
+    """Creates an order."""
     cart = Cart(request)
     if request.method == 'POST':
         form = OrderCreateForm(request.POST)
@@ -17,10 +19,10 @@ def order_create(request):
                                          quantity=item['quantity'])
             cart.clear()
             return render(request,
-                         'orders/order/create.html',
-                         {'cart': cart, 'form': form})
+                          'orders/order/create.html',
+                          {'cart': cart, 'form': form})
         else:
             form = OrderCreateForm()
         return render(request,
-                     'orders/order/create.html',
-                     {'cart': cart, 'form': form})
+                      'orders/order/create.html',
+                      {'cart': cart, 'form': form})
