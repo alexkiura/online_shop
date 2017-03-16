@@ -8,6 +8,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^cart/', include('cart.urls', namespace='cart')),
     url(r'^', include('shop.urls', namespace='shop')),
+    url(r'^create/$', include('orders.urls', namespace='orders')),
 ]
 
 if settings.DEBUG:
