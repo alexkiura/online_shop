@@ -2,7 +2,7 @@
 
 {% block title %}
     Checkout
-{% endblock title %}Checkout
+{% endblock title %}
 
 {% block content %}
 
@@ -19,7 +19,7 @@
         </ul>
         <p>Total: Ksh {{ cart.get_total_price }}</p>
     </div>
-    <form action="." methd="POST" class="order-form">
+    <form method="post" class="order-form">
       {{ form.as_p }}
       <p><input type="submit" value="Place Order"></p>
       {% csrf_token %}
