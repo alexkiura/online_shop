@@ -11,5 +11,8 @@
 .env
 .dotenv
 
+# linter config
+.pylintrc
+
 # staticfiles
 /staticfiles/
