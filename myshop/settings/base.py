@@ -50,6 +50,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 CART_SESSION_ID = 'cart'
 
 TEMPLATES = [
