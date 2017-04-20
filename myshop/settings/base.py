@@ -20,6 +20,7 @@ PREREQ_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'paypal.standard.ipn',
 ]
 
 PROJECT_APPS = [
@@ -99,3 +100,7 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+# DJango paypal settings
+PAYPAL_RECEIVER_EMAIL = 'kiuraalex@gmail.com'
+PAYPAL_TEST = True
