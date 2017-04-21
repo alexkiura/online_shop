@@ -103,5 +103,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # DJango paypal settings
-PAYPAL_RECEIVER_EMAIL = 'kiuraalex@gmail.com'
+PAYPAL_RECEIVER_EMAIL = os.getenv('PAYPAL_EMAIL')
+
 PAYPAL_TEST = True
