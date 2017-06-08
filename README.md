@@ -7,3 +7,4 @@ Features include:
 * Shopping cart
 * Customer orders
 * Notifications
+* Online payments
