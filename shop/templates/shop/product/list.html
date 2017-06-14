@@ -33,6 +33,7 @@
         </h1>
         {% for product in products %}
             <div class="item">
+                <strong>{{ product.name }}</strong>
                 <a href="{{ product.get_absolute_url }}">
                     <img class="product-image" src="{% if product.image %} {{ product.image.url }} {% else %}{% endif %}"
                         height="300" width="300" alt="Product image">
